@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
 
-        <!-- WorkManager init via startup library -->
+        <!-- Disable default WorkManager initializer in favor of custom Hilt factory -->
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
@@ -47,13 +47,9 @@
             tools:node="merge">
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
-                android:value="androidx.startup" />
+                android:value="androidx.startup"
+                tools:node="remove" />
         </provider>
-
-        <!-- Google Sign-In metadata -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
     </application>
 
