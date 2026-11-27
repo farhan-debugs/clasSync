@@ -1,0 +1,25 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Sensitive files — NEVER commit these
+google-services.json
+app/src/main/res/values/google_maps_api.xml
+*.jks
+*.keystore
+keystore.properties
+
+# Gradle wrapper (keep wrapper JAR committed for reproducibility)
+!gradle/wrapper/gradle-wrapper.jar
