@@ -14,12 +14,14 @@
 .cxx
 local.properties
 
-# Sensitive files — NEVER commit these
-google-services.json
+# Sensitive files — NEVER commit release keys
 app/src/main/res/values/google_maps_api.xml
 *.jks
-*.keystore
+release.keystore
 keystore.properties
+
+# Shared debug keystore for consistent GitHub/CI builds
+!debug.keystore
 
 # Gradle wrapper (keep wrapper JAR committed for reproducibility)
 !gradle/wrapper/gradle-wrapper.jar
